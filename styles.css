@@ -127,6 +127,75 @@ body {
     padding-inline: 25px;
 }
 
+.section {
+    padding-block: var(--section-padding);
+}
+
+.section-subtitle {
+    color: var(--royal-blue-light);
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    margin-block-end: 10px;
+}
+
+.h1,
+.h2,
+.h3 {
+    font-family: var(--ff-poppins);
+    line-height: 1.2;
+}
+
+.h1 {
+    color: var(--oxford-blue-1);
+    font-size: var(--fs-2);
+}
+
+.h2,
+.h3 {
+    color: var(--oxford-blue-2);
+}
+
+.h2 {
+    font-size: var(--fs-1);
+}
+
+.h3 {
+    font-size: var(--fs-5);
+}
+
+.btn {
+    background-image: linear-gradient(
+        var(--deg, 90deg),
+        var(--carolina-blue) 0%,
+        var(--royal-blue-light) 100%
+    );
+    color: var(--white);
+    font-size: var(--fs-7);
+    text-transform: uppercase;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-4);
+}
+
+.btn:is(:hover, :focus) {
+    --deg: -90deg;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card-text {
+    line-height: 1.7;
+}
+
 /* Header */
 .header-top,
 .header-bottom .btn {
@@ -205,7 +274,7 @@ body {
     border-block-end: 1px solid var(--gainsboro_50);
 }
 
-.navbar-link{
+.navbar-link {
     color: var(--jet);
     text-transform: uppercase;
     font-weight: var(--fw-600);
@@ -219,4 +288,84 @@ body {
     100% {
         transform: translateY(100%);
     }
+}
+
+/* Hero section */
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block-end: calc(var(--section-padding) / 2);
+}
+
+.hero-content {
+    margin-block-end: 50px;
+}
+
+.hero-title {
+    margin-block: 15px 30px;
+}
+
+.hero-text {
+    font-size: var(--fs-6);
+    line-height: 1.45;
+    margin-block-end: 40px;
+}
+
+.hero-form {
+    background-color: var(--white);
+    max-width: 95%;
+    padding: 15px;
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-3);
+}
+
+.hero-form .email-field {
+    background-color: var(--cultured);
+    color: var(--black);
+    min-height: 70px;
+    padding-inline: 15px;
+    border-radius: var(--radius-4);
+    margin-block-end: 15px;
+}
+
+.hero-form .btn {
+    width: 100%;
+}
+
+/* Service */
+.service-banner {
+    display: none;
+}
+
+.service {
+    padding-block-end: 0;
+}
+
+.service .section-title {
+    margin-block-end: 50px;
+}
+
+.service-list {
+    display: grid;
+    gap: 15px;
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    min-height: 100%;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-4);
+    padding: 30px;
+}
+
+.service-card .card-icon{
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.service-card .service-title{
+    margin-block-end: 8px;
 }
