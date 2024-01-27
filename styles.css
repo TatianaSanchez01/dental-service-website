@@ -192,7 +192,8 @@ body {
     text-align: center;
 }
 
-.card-text {
+.card-text,
+.section-text {
     line-height: 1.7;
 }
 
@@ -361,11 +362,32 @@ body {
     padding: 30px;
 }
 
-.service-card .card-icon{
+.service-card .card-icon {
     width: 50px;
     flex-shrink: 0;
 }
 
-.service-card .service-title{
+.service-card .service-title {
     margin-block-end: 8px;
+}
+
+/* About */
+
+.about {
+    padding-block-end: 0;
+}
+
+.about-banner {
+    padding-block-end: 50px;
+}
+
+.about .section-text-1 {
+    margin-block: 25px 15px;
+}
+
+.about .btn {
+    font-size: unset;
+    max-width: max-content;
+    margin-block-start: 30px;
+    padding-inline: 15px;
 }
