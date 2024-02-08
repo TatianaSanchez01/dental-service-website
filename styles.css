@@ -708,3 +708,25 @@ body {
 .footer .social-link:is(:hover, :focus) {
     background-image: var(--gradient);
 }
+
+/* Back to top */
+
+.back-top-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: var(--royal-blue-light);
+    font-size: 18px;
+    color: var(--white);
+    padding: 14px;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.back-top-btn.active {
+    transform: translateY(-10px);
+    visibility: visible;
+    opacity: 1;
+}
