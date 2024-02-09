@@ -730,3 +730,371 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+/* Media Queries */
+
+/* responsive for larger than 575px screen */
+
+@media (min-width: 575px) {
+    /* CUSTOM PROPERTY */
+
+    :root {
+        /* typography */
+        --fs-1: 4.2rem;
+    }
+
+    /* REUSED STYLE */
+    .container {
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    /* BLOG */
+    .blog-card .h3 {
+        --fs-5: 2.6rem;
+    }
+
+    /* FOOTER */
+    .footer-top .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* responsive for larger than 768px screen */
+
+@media (min-width: 768px) {
+    /* CUSTOM PROPERTY */
+    :root {
+        /* typography */
+        --fs-2: 4.8rem;
+    }
+
+    /* RESET */
+    body {
+        font-size: 1.6rem;
+    }
+
+    /* REUSED STYLE */
+    .container {
+        max-width: 750px;
+    }
+
+    .section-subtitle {
+        --fs-6: 2.2rem;
+    }
+
+    /* HERO */
+    .hero {
+        overflow: hidden;
+    }
+
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 0.75fr;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero-content {
+        margin-block-end: 0;
+    }
+
+    .hero-form {
+        position: relative;
+    }
+
+    .hero-form .email-field {
+        margin-block-end: 0;
+        padding-inline-end: 190px;
+    }
+
+    .hero-form .btn {
+        width: auto;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .hero-banner {
+        margin-inline-end: -60px;
+    }
+
+    /* SERVICE */
+    .service-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    /* DOCTOR */
+    .scrollbar-item {
+        min-width: calc(50% - 15px);
+    }
+
+    /* CTA */
+
+    .cta {
+        padding-block: 0;
+    }
+
+    .cta .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-end;
+        gap: 60px;
+    }
+
+    .cta-banner {
+        margin-block-end: 0;
+    }
+
+    .cta-content {
+        padding-block: 60px;
+    }
+
+    /* BLOG */
+    .blog-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* FOOTER */
+    .footer-bottom {
+        padding-block: 30px;
+    }
+
+    .footer-bottom .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        margin-block-end: 0;
+    }
+
+    /* BACK TO TOP */
+    .back-top-btn {
+        bottom: 70px;
+        right: 50px;
+    }
+}
+
+/* responsive for larger than 992px screen */
+
+@media (min-width: 992px) {
+    /* CUSTOM PROPERTY */
+
+    :root {
+        /* typography */
+        --fs-2: 6rem;
+        --fs-1: 4.6rem;
+        --fs-3: 4.6rem;
+    }
+
+    /* REUSED STYLE */
+    .container {
+        max-width: 980px;
+    }
+
+    /* HEADER */
+    .header-top {
+        display: block;
+        background-color: var(--oxford-blue-1);
+        color: var(--white);
+        padding-block: 20px;
+    }
+
+    .header-top :is(.container, .social-list),
+    .contact-list,
+    .contact-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-top .container {
+        justify-content: space-between;
+    }
+
+    .contact-list {
+        gap: 20px;
+    }
+
+    .contact-item {
+        gap: 5px;
+    }
+
+    .contact-item ion-icon {
+        color: var(--royal-blue-light);
+        --ionicon-stroke-width: 40px;
+    }
+
+    .contact-link {
+        font-size: 1.5rem;
+    }
+
+    .header-top .social-list {
+        gap: 15px;
+    }
+
+    .header-top .social-link {
+        font-size: var(--fs-6);
+        transition: var(--transition);
+    }
+
+    .header-top .social-link:is(:hover, :focus) {
+        color: var(--royal-blue-light);
+    }
+
+    .header-bottom {
+        top: 58px;
+        padding-block: 20px;
+    }
+
+    .header-bottom.active {
+        top: -95px;
+    }
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .navbar,
+    .navbar.active {
+        all: unset;
+        margin-inline-start: auto;
+    }
+
+    .navbar-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-list > li:not(:last-child) {
+        border-block-end: none;
+    }
+
+    .navbar-link {
+        color: var(--oxford-blue-1);
+        font-family: var(--ff-poppins);
+        text-transform: capitalize;
+        transition: var(--transition);
+    }
+
+    .navbar-link:is(:hover, :focus) {
+        color: var(--royal-blue-light);
+    }
+
+    .header-bottom .btn {
+        display: block;
+        padding: 15px 20px;
+    }
+
+    /* SERVICE */
+    .service-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-banner {
+        display: block;
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        align-self: center;
+    }
+
+    /* ABOUT */
+    .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-banner {
+        margin-block-end: 0;
+    }
+
+    /* DOCTOR */
+    .scrollbar-item {
+        min-width: calc(33.33% - 20px);
+    }
+
+    /* CTA */
+    .cta-content {
+        padding-block: 80px;
+    }
+
+    /* BLOG */
+    .blog-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FOOTER */
+    .footer-top .container {
+        grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
+    }
+}
+
+/* responsive for larger than 1200px screen */
+
+@media (min-width: 1200px) {
+    /* CUSTOM PROPERTY */
+
+    :root {
+        /* typography */
+        --fs-2: 8rem;
+        --fs-1: 5.5rem;
+        --fs-3: 4.8rem;
+    }
+
+    /* REUSED STYLE */
+    .container {
+        max-width: 1180px;
+    }
+
+    /* HEADER */
+    .contact-list {
+        gap: 30px;
+    }
+
+    .header-bottom .btn {
+        padding: 18px 30px;
+    }
+
+    .header-bottom > .container {
+        gap: 40px;
+    }
+
+    .navbar-list {
+        gap: 15px;
+    }
+
+    /* ABOUT */
+    .about .container {
+        grid-template-columns: 0.85fr 1fr;
+        gap: 100px;
+    }
+
+    /* DOCTOR */
+    .doctor {
+        padding-block-end: 180px;
+    }
+
+    .scrollbar-item {
+        min-width: calc(25% - 22.5px);
+    }
+
+    .has-scrollbar {
+        padding-block-end: 0;
+        margin-block-end: 0;
+    }
+
+    /* CTA */
+    .cta .container {
+        align-items: center;
+    }
+
+    .cta-banner {
+        margin-block-start: -120px;
+    }
+}
